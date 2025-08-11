@@ -1,6 +1,7 @@
-body { 
- color: white; 
-  background: black;
-  margin: 0px;
-  font-family: "Chakra Petch", sans-serif;
+body {
+  color: white; /* Define a cor do texto como branca */
+  background: black; /* Define a cor de fundo da página como preta */
+  margin: 0px; /* Remove as margens externas padrão do body */
+  font-family: "Chakra Petch", sans-serif; /* Define a fonte do texto como "Chakra Petch", se disponível, ou então usa uma fonte sans-serif padrão */
+  margin-bottom: 100px; /* Define uma margem inferior de 100px (afastamento do conteúdo da parte inferior da página) */
 }
