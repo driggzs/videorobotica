@@ -1,7 +1,7 @@
 body {          
     color: white;              /* definido a cor do texto como branco */
     background: black;         /*define a cor do fundo da página na cor preta */
-    margin: 200px;                  /*Zera o espaço próximo a margem da página */
+    margin: 100px;                  /*Zera o espaço próximo a margem da página */
     font-family: "Times New Roman", sans-serif;   /* Alterar a fonte do Texto */
-    margin-bottom: 400px;         /* Ajustar a margem inferior da Página*/
+    margin-bottom: 470px;         /* Ajustar a margem inferior da Página*/
 }
