@@ -5,3 +5,23 @@ body {
     font-family: "Times New Roman", sans-serif;   /* Alterar a fonte do Texto */
     margin-bottom: 470px;         /* Ajustar a margem inferior da Página*/
 }
+
+.chamada {
+    background: rgb(184, 156, 213);
+    padding-bottom: 80px;
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.chamada-texto {
+    margin-right: 5%;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
