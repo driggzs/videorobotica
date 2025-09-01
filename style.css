@@ -1,60 +1,60 @@
 body {
-  color: white; /* Define a cor do texto como branca */
-  background: black; /* Define a cor de fundo da página como preta */
-  margin: 0px; /* Remove margens padrão do navegador */
-  font-family: "Chakra Petch", sans-serif; /* Fonte usada na página */
-  margin-bottom: 100px; /* Adiciona espaço na parte inferior da página */
+  color: white; /* Estabelece a tonalidade do texto como branco */
+  background: black; /* Configura o fundo da página na cor preta */
+  margin: 0px; /* Elimina as margens padrão do navegador */
+  font-family: "Chakra Petch", sans-serif; /* Define a família tipográfica utilizada */
+  margin-bottom: 100px; /* Adiciona margem inferior ao corpo do documento */
 }
 
 header {
-  border-bottom: solid 2px rgb(42, 122, 228); /* Cria uma linha azul abaixo do cabeçalho */
-  padding: 20px; /* Espaçamento interno */
-  font-size: 32px; /* Tamanho do texto do cabeçalho */
-  color: rgb(42,122, 228); /* Cor azul para o texto do cabeçalho */
+  border-bottom: solid 2px rgb(42, 122, 228); /* Adiciona borda inferior na cor azul */
+  padding: 20px; /* Define o preenchimento interno do elemento */
+  font-size: 32px; /* Especifica o tamanho da fonte para o cabeçalho */
+  color: rgb(42,122, 228); /* Determina a coloração do texto como azul */
 }
 
 .chamada {
-  background: rgb(184, 156, 213); /* Cor de fundo lilás da seção de chamada */
-  padding-bottom: 80px; /* Espaço inferior interno */
-  padding-top: 80px; /* Espaço superior interno */
-  display: flex; /* Usa layout flexível para os filhos */
-  justify-content: center; /* Centraliza horizontalmente os elementos filhos */
+  background: rgb(184, 156, 213); /* Aplica fundo na tonalidade lilás */
+  padding-bottom: 80px; /* Configura o espaçamento interno inferior */
+  padding-top: 80px; /* Define o espaçamento interno superior */
+  display: flex; /* Ativa o modelo de layout flexbox */
+  justify-content: center; /* Centraliza os itens no eixo horizontal */
 }
 
 .chamada-texto {
-  margin-right: 5%; /* Espaço à direita para separar do vídeo */
+  margin-right: 5%; /* Adiciona margem à direita do elemento */
 }
 
 h1 {
-  font-size: 40px; /* Tamanho da fonte do título principal */
+  font-size: 40px; /* Define o tamanho da fonte para cabeçalhos de nível 1 */
 }
 
 p {
-  font-size: 20px; /* Tamanho da fonte dos parágrafos */
+  font-size: 20px; /* Estabelece o tamanho da fonte para parágrafos */
 }
 
 .categoria-videos {
-  display: flex; /* Layout flexível em linha */
-  overflow-x: auto; /* Permite rolagem horizontal se necessário */
-  gap: 10px; /* Espaço entre os vídeos */
+  display: flex; /* Utiliza o display flex para organização */
+  overflow-x: auto; /* Habilita a rolagem horizontal quando necessário */
+  gap: 10px; /* Cria espaçamento entre os elementos filhos */
 }
 
 .categoria {
-  padding-left: 20px; /* Espaço interno à esquerda */
-  padding-right: 20px; /* Espaço interno à direita */
-  margin-top: 50px; /* Espaço superior da seção */
+  padding-left: 20px; /* Adiciona preenchimento interno à esquerda */
+  padding-right: 20px; /* Adiciona preenchimento interno à direita */
+  margin-top: 50px; /* Define a margem superior da seção */
 }
 
 .categoria-videos img {
-  opacity: 0.5; /* Imagens levemente transparentes */
-  height: 200px; /* Altura fixa das miniaturas */
+  opacity: 0.5; /* Ajusta a transparência das imagens para 50% */
+  height: 200px; /* Fixa a altura uniforme para todas as miniaturas */
 }
 
 .categoria-videos img:hover {
-  opacity: 1.0; /* Ao passar o mouse, imagem fica visível totalmente */
-  border: 3px solid green; /* Adiciona borda verde ao passar o mouse */
+  opacity: 1.0; /* Remove a transparência ao passar o cursor */
+  border: 3px solid green; /* Adiciona contorno verde no estado hover */
 }
 
 .categoria h2 {
-  color: rgb(42,122,228); /* Cor azul para o título da seção */
+  color: rgb(42,122,228); /* Aplica coloração azul aos títulos de seção */
 }
