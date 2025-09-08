@@ -1,59 +1,333 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de Robótica</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Curso de Desenvolvimento de Sistemas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50, #4a69bd);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        section {
+            padding: 50px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-size: 2.2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #4a69bd;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .video-container {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: #4a69bd;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        .project-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .project-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .project-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .project-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .project-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature i {
+            color: #4a69bd;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .about-content, .project-content {
+                flex-direction: column;
+            }
+            
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-<body> <!-- Área principal do documento web -->
+<body>
+    <header>
+        <div class="container">
+            <h1>Curso de Desenvolvimento de Sistemas</h1>
+            <p>Explore o mundo da programação, inteligência artificial e inovação</p>
+        </div>
+    </header>
 
-  <header>Inovação em Automação Robótica</header> <!-- Topo da página com identificação da empresa -->
+    <main class="container">
+        <section id="sobre-ds">
+            <h2 class="section-title">O que é o curso de Desenvolvimento de Sistemas?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>O curso de Desenvolvimento de Sistemas é uma formação técnica que prepara profissionais para atuar no desenvolvimento de software, abrangendo desde a análise de requisitos até a implementação e manutenção de sistemas computacionais.</p>
+                    <p>Com a crescente digitalização do mundo, o profissional de DS tornou-se essencial em praticamente todos os setores da economia, desenvolvendo soluções tecnológicas que resolvem problemas reais e melhoram a eficiência de processos.</p>
+                    <p>O curso combina fundamentos de programação, banco de dados, engenharia de software e outras disciplinas importantes para formar desenvolvedores capacitados para o mercado de trabalho.</p>
+                </div>
+                <figure class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/4W4P0ytBHaY" title="Vídeo sobre o curso de Desenvolvimento de Sistemas" allowfullscreen></iframe>
+                    </div>
+                </figure>
+            </div>
+        </section>
 
-  <section class="chamada"> <!-- Segmento de destaque com conteúdo multimídia -->
+        <section id="ia">
+            <h2 class="section-title">Inteligência Artificial e seu impacto</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>IA Generativa</h3>
+                        <p>A IA Generativa é capaz de criar conteúdo original, incluindo textos, imagens, músicas e vídeos. Ela está revolucionando indústrias criativas e abrindo novas possibilidades para artistas, designers e desenvolvedores.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Tendências da IA para o futuro</h3>
+                        <p>Nos próximos anos, veremos a IA se tornar mais contextual e personalizada, com avanços em aprendizado por reforço, IA explicável e sistemas capazes de entender e responder a emoções humanas.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>IA no cotidiano das pessoas</h3>
+                        <p>Assistentes virtuais, recomendações personalizadas, diagnósticos médicos e carros autônomos são exemplos de como a IA já está presente no nosso dia a dia, tornando tarefas mais eficientes e melhorando a qualidade de vida.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>IA para aprendizado</h3>
+                        <p>Ferramentas de IA personalizam o ensino, adaptando-se ao ritmo de cada aluno. Sistemas tutores inteligentes identificam dificuldades e oferecem conteúdos específicos, revolucionando a educação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="chamada-texto"> <!-- Divisão com material textual promocional -->
-      <h1>Desenvolvendo Competências com Robótica Pedagógica</h1> <!-- Cabeçalho principal da área -->
-      <p>#conteúdos selecionados sobre automação e tecnologia</p> <!-- Texto de apoio com hashtag -->
-      <p>ACOMPANHE AS ATUALIZAÇÕES REGULARES</p> <!-- Mensagem de alerta para usuários -->
-    </div>
+        <section id="setec">
+            <h2 class="section-title">Projeto para a SETEC</h2>
+            <div class="project-content">
+                <div class="project-text">
+                    <p>Nosso projeto propõe a criação de uma plataforma web interativa com jogos educativos, onde 3 ou 4 grupos de alunos desenvolverão jogos relacionados ao conteúdo do curso de Desenvolvimento de Sistemas.</p>
+                    <p>O site terá uma aba de ranking e placar de pontos, alimentada por um banco de dados, que permitirá acompanhar o desempenho dos jogadores e estimular a competição saudável entre os participantes.</p>
+                    <p>Além de praticar programação, os alunos desenvolverão habilidades em trabalho em equipe, gerenciamento de projetos e solução de problemas, enquanto criam produtos divertidos e educativos.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <h3>Trabalho em Equipe</h3>
+                            <p>Grupos colaborando no desenvolvimento</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-trophy"></i>
+                            <h3>Sistema de Ranking</h3>
+                            <p>Placar competitivo com pontuações</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-database"></i>
+                            <h3>Banco de Dados</h3>
+                            <p>Armazenamento de scores e estatísticas</p>
+                        </div>
+                    </div>
+                </div>
+                <figure class="project-image">
+                    <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect fill='%234a69bd' width='400' height='300'/%3E%3Ctext fill='%23ffffff' font-family='Arial' font-size='20' x='50%25' y='50%25' text-anchor='middle'%3EProjeto SETEC%3C/text%3E%3C/svg%3E" alt="Ilustração do projeto para SETEC">
+                </figure>
+            </div>
+        </section>
+    </main>
 
-    <div> <!-- Container para elemento de mídia -->
-      <figure> <!-- Agrupamento semântico para mídia e sua legenda -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZPT-JP06H_M?si=vHTC2SL_9cGXLOGO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <figcaption>Demonstração de aplicações robóticas na educação</figcaption> <!-- Descrição contextual do vídeo -->
-      </figure>
-    </div>
-
-  </section> <!-- Encerramento da seção de chamada -->
-
-  <section class="categoria"> <!-- Seção dedicada à galeria de vídeos -->
-    <h2>CONTEÚDOS EXCLUSIVOS DE ROBÓTICA</h2> <!-- Título da galeria de mídias -->
-
-    <div class="categoria-videos"> <!-- Agrupamento flexível para miniaturas -->
-
-      <a href="https://youtu.be/JPITxZbf5H4?si=xLrc2tOJpZ-_qsGd"> <!-- Hiperlink para primeiro conteúdo -->
-        <img src="https://img.youtube.com/vi/JPITxZbf5H4/maxresdefault.jpg"/> <!-- Imagem representativa -->
-      </a>
-
-      <a href="https://www.youtube.com/watch?v=nCmIwcycUJ8"> <!-- Link para segundo vídeo -->
-        <img src="https://img.youtube.com/vi/nCmIwcycUJ8/maxresdefault.jpg"/> <!-- Miniatura YouTube -->
-      </a>
-
-      <a href="https://www.youtube.com/watch?v=FvRmEapoHRc"> <!-- Link para terceiro vídeo -->
-        <img src="https://img.youtube.com/vi/FvRmEapoHRc/maxresdefault.jpg"/> <!-- Imagem de preview -->
-      </a>
-
-      <a href="https://www.youtube.com/watch?v=Ipkw_hWW-Hw"> <!-- Link para quarto conteúdo -->
-        <img src="https://img.youtube.com/vi/Ipkw_hWW-Hw/maxresdefault.jpg"/> <!-- Miniatura embedada -->
-      </a>
-
-      <a href="https://www.youtube.com/watch?v=d4DzMNGoyis"> <!-- Link para quinto vídeo -->
-        <img src="https://img.youtube.com/vi/d4DzMNGoyis/maxresdefault.jpg"/> <!-- Imagem de capa -->
-      </a>
-
-    </div> <!-- Fechamento do container de vídeos -->
-  </section> <!-- Término da seção de categorias -->
-
-</body> <!-- Final do corpo do documento -->
-</html> <!-- Encerramento do código HTML -->
+    <footer>
+        <div class="container">
+            <p>Site desenvolvido para o curso de Desenvolvimento de Sistemas</p>
+            <p>© 2023 - Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
